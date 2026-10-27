@@ -12,7 +12,7 @@
 #include <string>
 
 template <typename T>
-class ArrayList : public List<T> {
+class LinkedList : public List<T> {
 private:
     T* items;
     int count;
@@ -28,14 +28,14 @@ private:
     }
 
 public:
-    explicit ArrayList(int size) {
+    explicit LinkedList(int size) {
         this->capacity = size;
         this->items = new T[capacity];
         this->count = 0;
     }
 
     // Destructor to free dynamically allocated memory
-    ~ArrayList() override {
+    ~LinkedList() override {
         delete[] items;
     }
 

@@ -1,16 +1,12 @@
-cmake_minimum_required(VERSION 4.2)
-project(ed1_list_cpp)
+cmake_minimum_required(VERSION 3.20)
+project(ed1_linked_list_cpp)
 
+# Configuração para compilação estrita em C++20
 set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-#add_executable(ed1_list_cpp main.cpp
-#        include/List.h
-#        include/ArrayList.h
-#        src/ArrayListTest.cpp)
+# Inclui o diretório de headers para facilitar o include
+include_directories(include)
 
-add_executable(ArrayListTest
-        src/ArrayListTest.cpp
-        include/ArrayList.h)
-
-# Se ainda mantiver um main.cpp na raiz, declare-o aqui:
-add_executable(Main main.cpp)
+# Define o executável de testes
+add_executable(LinkedListTest src/LinkedListTest.cpp)
